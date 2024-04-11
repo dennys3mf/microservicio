@@ -31,3 +31,5 @@ C:\Users\MI PC\Desktop\EXAMEN DAEA\MyMicroservice\obj\Debug\net8.0\refint\MyMicr
 C:\Users\MI PC\Desktop\EXAMEN DAEA\MyMicroservice\obj\Debug\net8.0\MyMicroservice.pdb
 C:\Users\MI PC\Desktop\EXAMEN DAEA\MyMicroservice\obj\Debug\net8.0\MyMicroservice.genruntimeconfig.cache
 C:\Users\MI PC\Desktop\EXAMEN DAEA\MyMicroservice\obj\Debug\net8.0\ref\MyMicroservice.dll
+C:\Users\MI PC\Desktop\EXAMEN DAEA\MyMicroservice\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\MI PC\Desktop\EXAMEN DAEA\MyMicroservice\obj\Debug\net8.0\MyMicroservice.sourcelink.json
