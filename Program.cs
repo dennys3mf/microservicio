@@ -1,5 +1,8 @@
-using System.Text.Json; 
-// Add this line to import the necessary namespace
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using System.Net.Http;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +10,18 @@ builder.Services.AddHttpClient();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Register CORS service
+builder.Services.AddCors();
+
 var app = builder.Build();
+
+// Configure CORS
+app.UseCors(options =>
+{
+    options.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -27,13 +41,3 @@ app.MapGet("/api", async (HttpClient httpClient) =>
 .WithOpenApi();
 
 app.Run();
-
-public class TenorService
-{
-    private readonly HttpClient _httpClient;
-
-    public TenorService(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
-}
